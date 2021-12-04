@@ -3,6 +3,8 @@
  * Jun Yan Gan - 101197834
  */
 
+
+// Server.js File
 var express = require('express')
 var app = express()
 const mongoose = require('mongoose');
@@ -32,6 +34,6 @@ app.get('/', (req, res) => {
 
 app.use(employeeRouter);
 
-app.listen(9090, () => {
+app.listen(8080, () => {
     console.log("Server is listening on port 8080");
 });
