@@ -31,7 +31,9 @@ app.post('/api/v1/employees', async (req, res) => {
     try {
         await employee.save()
         res.send(employee)
-        res.status(201).send("Created")
+        res.status(201).json({
+            status: "Created"
+        })
     } catch(err) {
         console.log("ERROR: Employee Not Saved. " + err)
         res.status(500).send(err)
@@ -59,7 +61,9 @@ app.put('/api/v1/employees/:_id', async (req, res) => {
         employee = await employeeModel.save()
         res.send(employee)
         console.log("Employee Updated.")
-        res.status(200).send("OK")
+        res.status(200).json({
+            status: "OK"
+        })
     } catch(err) {
         console.log("ERROR: Employee Not Updated. " + err)
         res.status(500).send(err)
@@ -71,8 +75,12 @@ app.put('/api/v1/employees/:_id', async (req, res) => {
 app.delete('/api/v1/employees/:_id', async (req, res) => {
     try {
         const employee = await employeeModel.findByIdAndDelete(req.params._id)
-        if(!employee) res.status(404).send("No Employee Found.")
-        res.status(204).send("No Content")
+        if(!employee) res.status(404).json({
+            status: "No Employee Found"
+        })
+        res.status(204).json({
+            status: "No Content"
+        })
     } catch(err) {
         console.log("ERROR: " + err)
         res.status(500).send(err)
