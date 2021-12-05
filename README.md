@@ -14,4 +14,21 @@
 ## GET After POST
 ![(4) Postman - GET after POST (Jun Yan Gan - 101197834)](https://user-images.githubusercontent.com/43416824/144729218-ff192033-d1d5-4a6a-8b83-88d4241ca79d.JPG)
 
+## GET 2
+![(5) Postman - GET #2 (Jun Yan Gan - 101197834)](https://user-images.githubusercontent.com/43416824/144729227-e75578de-4940-438e-9df3-8e114b00627c.JPG)
+
+## PUT
+![(6) Postman - PUT (Jun Yan Gan - 101197834)](https://user-images.githubusercontent.com/43416824/144729233-e6722312-d858-4290-b8c3-a7d45ecdb83b.JPG)
+
+## GET After PUT
+![(7) Postman - GET after PUT (Jun Yan Gan - 101197834)](https://user-images.githubusercontent.com/43416824/144729237-428f68c4-c05f-46f1-a3c6-fc9a7e5f023c.JPG)
+
+## DELETE
+![(8) Postman - DELETE (Jun Yan Gan - 101197834)](https://user-images.githubusercontent.com/43416824/144729239-f361b1dd-6372-48c3-b628-e7fcd9af838a.JPG)
+
+## GET After DELETE
+![(9) Postman - GET after DELETE (Jun Yan Gan - 101197834)](https://user-images.githubusercontent.com/43416824/144729242-cd0501fd-dfaf-4d25-89e3-2787078e6913.JPG)
+
+## MongoDB Database
+![MongoDB Database (Jun Yan Gan - 101197834)](https://user-images.githubusercontent.com/43416824/144729243-a88515be-5acc-4026-88c6-396fd885173a.JPG)
 
