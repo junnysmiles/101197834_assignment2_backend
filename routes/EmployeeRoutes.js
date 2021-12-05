@@ -53,9 +53,9 @@ app.get('/api/v1/employees/:id', async (req, res) => {
 
 
 // Employee resource is updated
-app.put('/api/v1/employees/:id', async (req, res) => {
+app.put('/api/v1/employees/:_id', async (req, res) => {
     try {
-        await employeeModel.findByIdAndUpdate(req.params.id, req.body)
+        await employeeModel.findByIdAndUpdate(req.params._id, req.body)
         employee = await employeeModel.save()
         res.send(employee)
         console.log("Employee Updated.")
@@ -68,9 +68,9 @@ app.put('/api/v1/employees/:id', async (req, res) => {
 
 
 // Employee resource is deleted
-app.delete('/api/v1/employees/:id', async (req, res) => {
+app.delete('/api/v1/employees/:_id', async (req, res) => {
     try {
-        const employee = await employeeModel.findByIdAndDelete(req.params.id)
+        const employee = await employeeModel.findByIdAndDelete(req.params._id)
         if(!employee) res.status(404).send("No Employee Found.")
         res.status(204).send("No Content")
     } catch(err) {

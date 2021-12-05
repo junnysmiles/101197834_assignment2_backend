@@ -8,19 +8,19 @@
 const mongoose = require('mongoose');
 
 const EmployeeSchema = new mongoose.Schema({
-  firstname: {
+  firstName: {
     type: String,
     required: [true, "First Name is required."],
     trim: true,
     lowercase: true,
   },
-  lastname: {
+  lastName: {
     type: String,
     required: [true, "Last Name is required."],
     trim: true,
     lowercase: true,
   },
-  emailid: {
+  emailId: {
     type: String,
     required: [true, "Email is required."],
     trim: true,

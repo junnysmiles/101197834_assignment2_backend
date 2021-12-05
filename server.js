@@ -10,7 +10,7 @@ var app = express()
 const mongoose = require('mongoose');
 const employeeRouter = require('./routes/EmployeeRoutes.js');
 
-const DB_URL = "mongodb+srv://junnysmiles:junny123@employees.7rtkp.mongodb.net/101197834_assignemtn2?retryWrites=true&w=majority"
+const DB_URL = "mongodb+srv://junnysmiles:junny123@employees.7rtkp.mongodb.net/101197834_assignment2?retryWrites=true&w=majority"
 
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
@@ -34,6 +34,6 @@ app.get('/', (req, res) => {
 
 app.use(employeeRouter);
 
-app.listen(8080, () => {
-    console.log("Server is listening on port 8080");
+app.listen(9090, () => {
+    console.log("Server is listening on port 9090");
 });
