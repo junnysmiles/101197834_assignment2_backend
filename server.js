@@ -7,6 +7,8 @@
 // Server.js File
 var express = require('express')
 var app = express()
+const cors = require('cors')
+const bodyParser = require('body-parser')
 const mongoose = require('mongoose');
 const employeeRouter = require('./routes/EmployeeRoutes.js');
 
@@ -14,6 +16,8 @@ const DB_URL = "mongodb+srv://junnysmiles:junny123@employees.7rtkp.mongodb.net/1
 
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
+app.use(cors())
+app.use(bodyParser.json())
 
 mongoose.Promise = global.Promise;
 
@@ -27,13 +31,10 @@ mongoose.connect(DB_URL, {
     process.exit();
 });
 
-
-app.get('/', (req, res) => {
-    res.send("<h1>Welcome to Assignment 2 - Full Stack Development</h1>");
-});
-
 app.use(employeeRouter);
 
-app.listen(9090, () => {
+const PORT = process.env.PORT || 9090
+
+app.listen(PORT, () => {
     console.log("Server is listening on port 9090");
 });
